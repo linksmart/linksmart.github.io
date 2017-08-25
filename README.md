@@ -1,8 +1,6 @@
-# fullPage Jekyll
+# linksmart.eu
 
-[fullPage.js](https://github.com/alvarotrigo/fullPage.js) & `Bootstrap 4` template for [Jekyll](jekyllrb.com).
-
-Go to [the website](https://aksakalli.github.io/fullpage-jekyll/) for detailed information and demo.
+Source for `linksmart.eu` website.
 
 ## Running locally
 
@@ -22,4 +20,4 @@ bundle exec jekyll serve
 
 ## License
 
-Released under [the MIT license](LICENSE).
+[Apache License, Version 2.0](LICENSE).

@@ -1,15 +1,19 @@
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-  </button>
+<div class="logo-container">
+  <img src="img/logo.png" alt="LinkSmart logo">
+</div>
+
+<nav class="navbar navbar-expand-md fixed-top smart-navbar">
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav mx-auto" id="menu">
-      <a class="navbar-brand" href="#">{{site.title}}</a>
       {% for tab in site.tabs %}
         {% capture id %}{{ tab.id | remove:'/' | remove:'tabs' | downcase }}{% endcapture %}
-        <li class="nav-item" data-menuanchor="{{id}}">
-          <a class="nav-link" href="#{{id}}">{{tab.title}}</a>
-        </li>
+        {% if forloop.first %}
+          <a class="navbar-brand" href="#{{id}}">{{site.title}}</a>
+        {% else %}
+          <li class="nav-item" data-menuanchor="{{id}}">
+            <a class="nav-link" href="#{{id}}">{{tab.title}}</a>
+          </li>
+        {% endif %}
       {% endfor %}
     </ul>
   </div>

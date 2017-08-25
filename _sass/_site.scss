@@ -19,3 +19,33 @@
 .tab-base {
   padding-top: 150px;
 }
+
+.footer {
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+
+  .footer-content {
+    width:200px;
+    height:60px;
+    background: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.navbar {
+  transition: all 1s ease;
+}
+
+.logo-container {
+  img {
+    width: 70px;
+  }
+  position: fixed;
+  top: 10px;
+  z-index: 1030;
+  width: 100%;
+  text-align: center;
+}
