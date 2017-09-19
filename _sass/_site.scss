@@ -49,3 +49,26 @@
   width: 100%;
   text-align: center;
 }
+
+
+.fp-section {
+  .reveal {
+    visibility: visible; 
+    opacity: 0; 
+    transform: matrix3d(0.8, 0, 0, 0, 0, 0.8, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); 
+    transition: opacity 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;      
+  }
+
+  &.fp-completely {
+    .reveal {
+      opacity: 1; 
+      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+
+      @for $i from 1 through 8{
+        &.delay-#{$i} {
+          transition-delay: 0s + $i/2;
+        }
+      }
+    }
+  }
+}
