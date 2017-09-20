@@ -16,6 +16,18 @@
   background: linear-gradient(to left, #8E54E9, #4776E6);
 }
 
+.sel-gradient {
+  background: #00467F;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #A5CC82, #00467F);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #A5CC82, #00467F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+}
+
+.blue-gradient {
+  background:rgb(227, 238, 252);
+  background: -webkit-linear-gradient(to bottom, #ffffff, rgb(227, 238, 252));
+  background: linear-gradient(to bottom, #ffffff, rgb(227, 238, 252));
+}
+
 .tab-base {
   padding-top: 150px;
 }
@@ -72,3 +84,105 @@
     }
   }
 }
+
+// it should be above the footer
+.fp-slidesNav.bottom {
+  bottom: 60px;
+}
+
+
+#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span {
+  background: #007bff ;
+  position: absolute;
+}
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+  border: 1px solid #007bff ;
+  background: rgba(0, 0, 0, 0);
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+}
+
+#fp-nav ul li:hover a span,
+.fp-slidesNav ul li:hover a span,
+#fp-nav ul li a.active span, 
+.fp-slidesNav ul li a.active span, 
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span {
+  width: 8px;
+  height: 8px;
+  margin: -2px 0 0 -2px;
+}
+
+.brick-wrapper-container{
+  white-space: nowrap;
+  text-align: center;
+  .brick-wrapper{
+    display:inline-block;
+    width:11.8vw;
+    height:7.2vw;
+    position: relative;
+    margin:1.2vw;
+    white-space: normal;
+  }  
+}
+
+.brick{
+  width:11.8vw;
+  height:7.2vw;
+  border: 1px solid #000;
+  padding: .3vw;;
+
+  .gear {
+    position: absolute;
+    top: -1.4vw;
+    width: 3.6vw;
+    height: 1.4vw;
+    border: 1px solid #000;
+
+    &.gear-left{
+      left: 1.2vw;
+    }
+    &.gear-right{
+      right: 1.2vw;
+    }
+  }
+
+  .icon-container{
+    background-repeat: no-repeat;
+    background-position: center;  
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// .brick{
+//   width:7.9vw;
+//   height:4.8vw;
+//   border: 1px solid #000;
+//   padding: .2vw;;
+
+//   .gear {
+//     position: absolute;
+//     top: -.9vw;
+//     width: 2.4vw;
+//     height: .9vw;
+//     border: 1px solid #000;
+
+//     &.gear-left{
+//       left: .8vw;
+//     }
+//     &.gear-right{
+//       right: .8vw;
+//     }
+//   }
+
+//   .icon-container{
+//     background-repeat: no-repeat;
+//     background-position: center;  
+//     background-size: contain;
+//     width: 100%;
+//     height: 100%;
+//   }
+// }

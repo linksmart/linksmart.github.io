@@ -17,7 +17,11 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  - Dockerfile
 
 collections:
   tabs:
     output: false
+    
+sass:
+    sass_dir: _sass

@@ -2,6 +2,7 @@ $(function() {
   $('#fullpage').fullpage({
     verticalCentered: false,
     navigation: true,
+    slidesNavigation: true,
     anchors: anchors,
     menu: '#menu',
     onLeave: function(index, nextIndex, direction){
@@ -16,7 +17,7 @@ $(function() {
 function sectionHandler(index) {
   if (index > 1) {
     $('.navbar')
-      .addClass('navbar-dark bg-dark')
+      .addClass('navbar-dark bg-primary')
       .css('top', 0);
 
     $('.navbar-brand')
@@ -28,7 +29,7 @@ function sectionHandler(index) {
   }
   else {
     $('.navbar')
-      .removeClass('navbar-dark bg-dark')
+      .removeClass('navbar-dark bg-primary')
       .css('top', '80px');
 
     $('.navbar-brand')
