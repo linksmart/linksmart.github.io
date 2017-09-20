@@ -8,6 +8,7 @@ RUN apk add --update nginx \
     ruby-irb \
     gcc \
     make \
+    libc-dev \
     libffi-dev 
 
 RUN gem install bundle
@@ -20,7 +21,9 @@ WORKDIR /jekyll
 
 ADD . /jekyll
 
-# RUN gem install ffi --version='1.0.9'
-# RUN bundle install
+
+RUN bundle install \
+    && bundle exec jekyll build
+
 
 
