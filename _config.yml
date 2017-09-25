@@ -18,10 +18,12 @@ exclude:
   - Gemfile.lock
   - README.md
   - Dockerfile
+  - nginx/
+  - LICENSE
 
 collections:
   tabs:
     output: false
-    
+
 sass:
     sass_dir: _sass
