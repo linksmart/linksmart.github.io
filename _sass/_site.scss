@@ -117,6 +117,8 @@
 .brick-wrapper-container{
   white-space: nowrap;
   text-align: center;
+  margin-bottom: 4vw;
+  
   .brick-wrapper{
     display:inline-block;
     width:11.8vw;
@@ -124,6 +126,22 @@
     position: relative;
     margin:1.2vw;
     white-space: normal;
+
+    &.active:before{
+      content:'';
+      display:block;
+      width:0;
+      height:0;
+      position:absolute;
+  
+      border-left: 5vw solid transparent;
+      border-right: 5vw solid transparent;
+      
+      border-bottom: 4vw solid gray;
+      
+      left:.7vw;
+      top: 9vw; 
+    }
   }  
 }
 
@@ -132,7 +150,8 @@
   height:7.2vw;
   border: 1px solid #000;
   padding: .3vw;;
-
+  cursor: pointer;
+  
   .gear {
     position: absolute;
     top: -1.4vw;

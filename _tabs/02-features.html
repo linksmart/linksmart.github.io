@@ -8,47 +8,86 @@ class: cloud-gradient
     <h1 class="reveal text-center">Quick-start with LinkSmart® building bricks</h1>
 </div>
 <div class="brick-wrapper-container mt-5">
-        <div class="brick-wrapper reveal delay-2" style="top:10px;">
-            <div class="brick" style="transform: rotate(-5deg);">
+        <div class="brick-wrapper reveal delay-1 active" style="top:1vw;">
+            <div class="brick" style="transform: rotate(-5deg);" onclick="selectBrick(this, 0)" data-slide-to="0">
                 <div class="gear gear-left"></div>
                 <div class="gear gear-right"></div>
                 <div class="icon-container" style="background-image: url('img/link-symbol.svg');"></div>
             </div>
         </div>
         <div class="brick-wrapper reveal delay-3">
-            <div class="brick" style="transform: rotate(5deg);">
+            <div class="brick" style="transform: rotate(5deg);" onclick="selectBrick(this, 1)">
                 <div class="gear gear-left"></div>
                 <div class="gear gear-right"></div>
                 <div class="icon-container" style="background-image: url('img/influxdb.png');"></div>
             </div>
         </div>
-        <div class="brick-wrapper reveal delay-2" style="top:15px;">
-            <div class="brick" style="transform: rotate(-7deg);">
+        <div class="brick-wrapper reveal delay-2" style="top:1.5vw;">
+            <div class="brick" style="transform: rotate(-7deg);" onclick="selectBrick(this, 2)">
                 <div class="gear gear-left"></div>
                 <div class="gear gear-right"></div>
                 <div class="icon-container" style="background-image: url('img/grafana.png');"></div>
             </div>
         </div>
         <div class="brick-wrapper reveal delay-1">
-            <div class="brick" style="transform: rotate(7deg);">
+            <div class="brick" style="transform: rotate(7deg);" onclick="selectBrick(this, 3)">
                 <div class="gear gear-left"></div>
                 <div class="gear gear-right"></div>
                 <div class="icon-container" style="background-image: url('img/settings.svg');"></div>
             </div>
         </div>
-        <div class="brick-wrapper reveal delay-4" style="top:10px;">
-            <div class="brick" style="transform: rotate(-5deg); top:10px;">
+        <div class="brick-wrapper reveal delay-4" style="top:1vw;">
+            <div class="brick" style="transform: rotate(-5deg); top:1vw;" onclick="selectBrick(this, 4)">
                 <div class="gear gear-left"></div>
                 <div class="gear gear-right"></div>
                 <div class="icon-container" style="background-image: url('img/lock.svg');"></div>
             </div>
         </div>
         <div class="brick-wrapper reveal delay-1">
-            <div class="brick" style="transform: rotate(5deg);">
+            <div class="brick" style="transform: rotate(5deg);" onclick="selectBrick(this, 5)">
                 <div class="gear gear-left"></div>
                 <div class="gear gear-right"></div>
                 <div class="icon-container" style="background-image: url('img/docker.png');"></div>
             </div>
         </div>
-
+    </div>
+    <div id="brickCarousel" class="carousel slide text-light pt-5 pb-5 wt-100 reveal delay-1" style="background-color: gray;">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                    <div class="container">
+                        <h1>Connect</h1>
+                        <p>Connect your devices through easy-to-use APIs. Simple IoT sensors or complex factory lines; real-time data or existing databases.</p>
+                    </div>
+              </div>
+              <div class="carousel-item">
+                    <div class="container">
+                        <h1>Store</h1>
+                        <p>Efficiently store your sensor data with the built in InfluxDB time series database.  </p>
+                    </div>
+              </div>
+              <div class="carousel-item">
+                    <div class="container">
+                        <h1>Visualize</h1>
+                        <p>Visualize sensor data with the built-in Grafana plugin.</p>
+                    </div>                
+              </div>
+              <div class="carousel-item">
+                    <div class="container">
+                        <h1>Process</h1>
+                        <p>Implement stream mining at the edge or in the cloud. Even add online machine learning to your IoT application.</p>
+                    </div>                
+              </div>
+              <div class="carousel-item">
+                    <div class="container">
+                        <h1>Secure</h1>
+                        <p>Secure your services via TLS. Add user management, authentication, and policies.</p>
+                    </div>                
+              </div>
+              <div class="carousel-item">
+                    <div class="container">
+                        <h1>Deploy</h1>
+                        <p>Easily deploy your application with Docker.</p>
+                    </div>                
+              </div>                                         
+            </div>
     </div>
