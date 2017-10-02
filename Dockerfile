@@ -29,13 +29,6 @@ RUN apk add --update nginx \
     && apk del $BUILD_PACKAGES \
     && rm -rf /var/cache/apk/*
 
-
-RUN apk add --update nginx \
-  && rm -rf /var/cache/apk/* \
-  && mkdir -p  /usr/share/nginx/html \
-  && echo hello > /usr/share/nginx/html/index.html
-
-
 COPY nginx/nginx.conf /etc/nginx/nginx.conf
 COPY nginx/default.conf /etc/nginx/conf.d/default.conf
 
