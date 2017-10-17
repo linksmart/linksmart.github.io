@@ -18,26 +18,18 @@ $(function() {
 function sectionHandler(index) {
   if (index > 1) {
     $('.navbar')
-      .addClass('navbar-dark bg-primary')
+      // .addClass('bg-dark')
+      .css('background-color', '#555555')
       .css('top', 0);
 
-    $('.navbar-brand')
-      .fadeIn();
-
-    $('.logo-container')
-      .fadeOut();
 
   }
   else {
     $('.navbar')
-      .removeClass('navbar-dark bg-primary')
-      .css('top', '80px');
+      .removeClass('bg-dark')
+      .css('background-color', '')
+      .css('top', '60px');
 
-    $('.navbar-brand')
-      .fadeOut();
-
-    $('.logo-container')
-      .fadeIn();
   }
   console.log(index);
 };

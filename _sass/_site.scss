@@ -1,32 +1,14 @@
-.metalic-gradient {
-  background: #abbaab;
-  background: -webkit-linear-gradient(to bottom, #ffffff, #abbaab);
-  background: linear-gradient(to bottom, #ffffff, #abbaab);
+.intro-bg {
+  background: #258cd4;
 }
 
-.cloud-gradient {
-  background: #ECE9E6;
-  background: -webkit-linear-gradient(to left, #FFFFFF, #ECE9E6);
-  background: linear-gradient(to left, #FFFFFF, #ECE9E6);
-}
+// .navbar-nav>li{
+//   border-right: 1px solid white;
+// }
 
-.violet-gradient {
-  background: #4776E6;
-  background: -webkit-linear-gradient(to left, #8E54E9, #4776E6);
-  background: linear-gradient(to left, #8E54E9, #4776E6);
-}
-
-.sel-gradient {
-  background: #00467F;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #A5CC82, #00467F);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #A5CC82, #00467F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
-}
-
-.blue-gradient {
-  background:rgb(227, 238, 252);
-  background: -webkit-linear-gradient(to bottom, #ffffff, rgb(227, 238, 252));
-  background: linear-gradient(to bottom, #ffffff, rgb(227, 238, 252));
-}
+// .navbar-nav>li:last-child{
+//   border: none;
+// }
 
 .tab-base {
   padding-top: 150px;
@@ -50,18 +32,6 @@
 .navbar {
   transition: all 1s ease;
 }
-
-.logo-container {
-  img {
-    width: 70px;
-  }
-  position: fixed;
-  top: 10px;
-  z-index: 1030;
-  width: 100%;
-  text-align: center;
-}
-
 
 .fp-section {
   .reveal {
