@@ -6,6 +6,8 @@ $(function() {
     anchors: anchors,
     menu: '#menu',
     slideSelector:'fp-slide',
+    responsiveWidth:768,
+    // scrollOverflow:true,
     onLeave: function(index, nextIndex, direction){
       sectionHandler(nextIndex);
     },
@@ -13,22 +15,27 @@ $(function() {
       sectionHandler(index);
     }
   });
+
+
+  $('#world').load('img/world.svg', function(a) {
+    $(this).children()[0].setAttribute('viewBox',"0 0 1000 1000");
+  });  
 });
 
 function sectionHandler(index) {
   if (index > 1) {
     $('.navbar')
-      // .addClass('bg-dark')
-      .css('background-color', '#555555')
-      .css('top', 0);
+      .removeClass('highlighted')
+      // .css('background-color', '#555555')
+      // .css('top', 0);
 
 
   }
   else {
     $('.navbar')
-      .removeClass('bg-dark')
-      .css('background-color', '')
-      .css('top', '60px');
+       .addClass('highlighted');
+      // .css('background-color', '')
+      // .css('top', '60px');
 
   }
   console.log(index);

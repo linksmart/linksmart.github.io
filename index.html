@@ -9,16 +9,16 @@
 <div id="fullpage">
   {% for tab in site.tabs %}
     {% capture id %}{{ tab.id | remove:'/' | remove:'tabs' | downcase }}{% endcapture %}
-    <div class="section tab-base {{tab.class}}">
+    <div class="section {{tab.class}}">
       {{ tab.content }}
     </div>
   {% endfor %}
 </div>
 
 <footer class="footer">
-    <div class="footer-content mx-auto border border-primary rounded-top">
-      <a class="float-left pl-3" href="#">Imprint</a>
-      <a class="float-right pr-3" href="#">FAQ</a>
+    <div class="footer-content mx-auto">
+      <a class="float-left pl-5" href="#">Imprint</a>
+      <a class="float-right pr-5" href="#">FAQ</a>
     </div>
 </footer>
 
