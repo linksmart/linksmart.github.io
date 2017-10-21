@@ -19,7 +19,7 @@ $(function() {
 
   $('#world').load('img/world.svg', function(a) {
     $(this).children()[0].setAttribute('viewBox',"0 0 1000 1000");
-  });  
+  });
 });
 
 function sectionHandler(index) {
@@ -38,7 +38,7 @@ function sectionHandler(index) {
       // .css('top', '60px');
 
   }
-  console.log(index);
+  // console.log(index);
 };
 
 var brickCarousel = $('#brickCarousel').carousel({
@@ -60,3 +60,13 @@ function selectBrick(element, i){
   // $(element).css('transform', $(element).css('transform') + scaleTransform);
 }
 
+function selectBox(el, codes){
+  $('.box-item').removeClass('active');
+  $(el).addClass('active');
+
+  $('#world path').css({ fill: "" });
+  codes.split(',').forEach(function(e) {
+    document.getElementById(e).style.fill = '#fca730';
+  });
+
+}

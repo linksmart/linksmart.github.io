@@ -11,7 +11,7 @@ $theme-colors: (
 
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 $font-family-base: 'Raleway', sans-serif;
-
+$border-radius-lg: 1.5rem;
 
 @import
   "bootstrap/bootstrap"

@@ -1,25 +1,36 @@
+.btn {
+  border-radius: 25px;
+}
 
 .intro-bg {
   background: #258cd4;
 
-  display: table;
-  table-layout: fixed;
+
   width: 100%;
-  @include media-breakpoint-up(lg) {  
+  @include media-breakpoint-up(lg) {
     background-image: url(../img/bg-graph.png);
     background-repeat: no-repeat;
-    background-position: top right;
+    background-position: center right;
   }
-  .intro-content{
-    display: table-cell;
-    vertical-align: middle;
+
+  @include media-breakpoint-up(sm) {
+    display: table;
+    table-layout: fixed;
+    .intro-content{
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 }
 
 .why-bg {
   background: #81c3ed;
   padding-top: 80px;
-  @include media-breakpoint-up(lg) {  
+  @include media-breakpoint-up(lg) {
     padding-top: 110px;
   }
   feature-icon path {
@@ -33,7 +44,7 @@
 .solutions-bg{
   background: #e1e8eb;
   padding-top: 80px;
-  @include media-breakpoint-up(lg) {  
+  @include media-breakpoint-up(lg) {
     padding-top: 110px;
   }
 }
@@ -41,22 +52,54 @@
 .domains-bg{
   background: #258cd4;
   padding-top: 80px;
-  @include media-breakpoint-up(lg) {  
+  z-index: 10;
+  @include media-breakpoint-up(lg) {
     padding-top: 110px;
   }
 
   #world {
+    z-index: -1;
     position: absolute;
     right: -270px;
     width: 1000px;
     height: 1000px;
 
-    @include media-breakpoint-down(md) {  
+    @include media-breakpoint-down(md) {
       display: none;
+    }
+  }
+
+  .box-list {
+    svg{
+      max-width: 50px;
+      max-height: 50px;
+    }
+    .box-item {
+      color: white;
+      text-align: center;
+      width: 120px;
+      display: block;
+      float: left;
+      margin: 20px;
+      cursor: pointer;
+      &.active {
+        color: map-get($theme-colors, warning);
+      }
     }
   }
 }
 
+.icon {
+  fill: currentColor;
+  * {
+    fill: currentColor !important;
+  }
+}
+
+.tab-header{
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
 
 
 .navbar{
@@ -65,14 +108,22 @@
   .navbar-brand img{
     transition: all 1s ease;
   }
-  &.highlighted{
-    background-color: rgba(0,0,0,0);;
-    top: 60px;
-    .navbar-brand img {
-      height: 80px;
-      width: 80px;
-      margin-top: -25px;
+  @include media-breakpoint-up(lg) {
+    &.highlighted{
+      background-color: rgba(0,0,0,0);;
+      top: 60px;
+      .navbar-brand img {
+        height: 80px;
+        width: 80px;
+        margin-top: -25px;
+      }
     }
+    ul.navbar-nav{
+      margin-left: auto !important;
+    }
+  }
+  .nav-link{
+    letter-spacing: 5px;
   }
 }
 // .navbar-nav>li{
@@ -103,29 +154,36 @@
       letter-spacing: 5px;
       font-size: 12px;
     }
-    
+
   }
 }
 
 .fp-section {
-  .reveal {
-    visibility: visible; 
-    opacity: 0; 
-    transform: matrix3d(0.8, 0, 0, 0, 0, 0.8, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); 
-    transition: opacity 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, transform 0.3s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;      
-  }
 
-  &.fp-completely {
+  @include media-breakpoint-up(md) {
     .reveal {
-      opacity: 1; 
-      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+      visibility: visible;
+      opacity: 0;
+      transform: matrix3d(0.8, 0, 0, 0, 0, 0.8, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+      transition: opacity 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, transform 0.3s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
+    }
 
-      @for $i from 1 through 8{
-        &.delay-#{$i} {
-          transition-delay: 0s + $i/3;
+    &.fp-completely {
+      .reveal {
+        opacity: 1;
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+
+        @for $i from 1 through 8{
+          &.delay-#{$i} {
+            transition-delay: 0s + $i/5;
+          }
         }
       }
     }
+  }
+
+  @include media-breakpoint-down(sm) {
+    height: auto !important;
   }
 }
 
@@ -152,8 +210,8 @@
 
 #fp-nav ul li:hover a span,
 .fp-slidesNav ul li:hover a span,
-#fp-nav ul li a.active span, 
-.fp-slidesNav ul li a.active span, 
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
 #fp-nav ul li:hover a.active span,
 .fp-slidesNav ul li:hover a.active span {
   width: 18px;

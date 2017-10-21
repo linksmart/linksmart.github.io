@@ -5,19 +5,23 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav ml-auto text-uppercase" id="menu">
+          <ul class="navbar-nav text-uppercase" id="menu">
             {% for tab in site.tabs %}
               {% capture id %}{{ tab.id | remove:'/' | remove:'tabs' | downcase }}{% endcapture %}
               {% if forloop.first %}
                 <a class="navbar-brand" href="#{{id}}">
                   <img src="img/logo.png" width="30" height="30" alt="">
-                  
+
                 </a>
               {% else %}
                 <li class="nav-item" data-menuanchor="{{id}}">
                   <a class="nav-link" href="#{{id}}">{{tab.title}}</a>
                 </li>
               {% endif %}
+              {% if forloop.first == false and forloop.last  == false %}
+                <li class="d-none d-lg-block"><span class="nav-link">|</span></li>
+              {% endif %}
+
             {% endfor %}
           </ul>
         </div>
