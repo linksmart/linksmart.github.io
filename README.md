@@ -18,6 +18,21 @@ cd jekyll-doc-theme
 bundle exec jekyll serve
 ```
 
+## Docker
+
+The only docker image generates the site using Jekyll and serves the generated static website with nginx for better performance.
+Building the image:
+
+```
+$ docker build -t linksmart-site .
+``` 
+
+Running the image:
+
+```
+$ docker run -p 80:80 -d linksmart-site
+```
+
 ## License
 
 [Apache License, Version 2.0](LICENSE).
