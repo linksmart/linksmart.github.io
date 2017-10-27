@@ -60,10 +60,7 @@ function selectBrick(element, i){
   // $(element).css('transform', $(element).css('transform') + scaleTransform);
 }
 
-function selectBox(el, codes){
-  $('.box-item').removeClass('active');
-  $(el).addClass('active');
-
+function selectBox(codes){
   $('#world path').css({ fill: "" });
   codes.split(',').forEach(function(e) {
     document.getElementById(e).style.fill = '#fca730';

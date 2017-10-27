@@ -30,6 +30,7 @@
 .why-bg {
   background: #81c3ed;
   padding-top: 80px;
+  padding-bottom: 20px;
   @include media-breakpoint-up(lg) {
     padding-top: 110px;
   }
@@ -44,6 +45,7 @@
 .solutions-bg{
   background: #e1e8eb;
   padding-top: 80px;
+  padding-bottom: 20px;  
   @include media-breakpoint-up(lg) {
     padding-top: 110px;
   }
@@ -52,6 +54,7 @@
 .domains-bg{
   background: #258cd4;
   padding-top: 80px;
+  padding-bottom: 20px;
   z-index: 10;
   @include media-breakpoint-up(lg) {
     padding-top: 110px;
@@ -61,8 +64,9 @@
     z-index: -1;
     position: absolute;
     right: -270px;
-    width: 1000px;
-    height: 1000px;
+    width: 1100px;
+    height: 700px;
+    bottom: 0;
 
     @include media-breakpoint-down(md) {
       display: none;
@@ -78,14 +82,43 @@
       color: white;
       text-align: center;
       width: 120px;
-      display: block;
-      float: left;
-      margin: 20px;
+      // display: block;
+      // float: left;
+      // margin: 20px;
       cursor: pointer;
       &.active {
         color: map-get($theme-colors, warning);
       }
     }
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+  .tab-content > .tab-pane {
+    @include media-breakpoint-down(sm) {
+      display: block;
+      opacity: 1;
+    }
+  }
+}
+
+.box-card {
+  background: #E1E8EB;
+  color: black;
+  
+  @include media-breakpoint-up(lg) {
+    max-width: 600px;
+  }
+}
+
+.card-icon{
+  text-align: center;
+  .icon{
+    height: 60px;
+  }
+  @include media-breakpoint-up(md) {
+    display: none;
   }
 }
 
@@ -99,8 +132,18 @@
 .tab-header{
   letter-spacing: 5px;
   text-transform: uppercase;
+  @include media-breakpoint-down(sm) {
+    font-size: 1.5rem;
+  }
 }
 
+.tab-text{
+  letter-spacing: 2px;
+  
+  @include media-breakpoint-down(sm) {
+    font-size: 4rem;
+  }
+}
 
 .navbar{
   transition: all 1s ease;
@@ -118,9 +161,10 @@
         margin-top: -25px;
       }
     }
-    ul.navbar-nav{
-      margin-left: auto !important;
-    }
+    // to make it at right
+    // ul.navbar-nav{
+    //   margin-left: auto !important;
+    // }
   }
   .nav-link{
     letter-spacing: 5px;
