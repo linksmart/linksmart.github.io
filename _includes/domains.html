@@ -1,0 +1,51 @@
+{% assign domains = site.data.domains %}
+
+<nav class="nav box-list mt-2 mb-2" role="tablist">
+  {% for domain in domains %}
+  <a class="nav-item nav-link box-item reveal delay-{{ forloop.index }}
+        {% if forloop.first %}show active{% endif %}"
+        id="nav-{{forloop.index}}-{{ domain.title | slugify }}-tab"
+        href="#nav-{{forloop.index}}-{{ domain.title | slugify }}"
+        onclick="selectCountries('{{domain.countries}}')"
+        {% if forloop.first %}
+          aria-selected="true"
+        {% else %}
+          aria-selected="false"
+        {% endif %}
+        aria-controls="nav-{{forloop.index}}-{{ domain.title | slugify }}"
+        data-toggle="tab" role="tab">
+    <svg class="icon">
+      <use xlink:href="img/sprite.svg#{{domain.icon}}" />
+    </svg>
+    <h6>{{domain.title}}</h6>
+  </a>
+  {% endfor %}
+</nav>
+
+<div class="tab-content reveal delay-2" id="nav-tabContent">
+  {% for domain in domains %}
+  <div class="card-icon">
+    <svg class="icon">
+      <use xlink:href="img/sprite.svg#{{domain.icon}}" />
+    </svg>
+    <h6>{{domain.title}}</h6>
+  </div>
+  <div id="nav-{{forloop.index}}-{{ domain.title | slugify }}"
+    aria-labelledby="nav-{{forloop.index}}-{{ domain.title | slugify }}-tab"
+    class="tab-pane fade mb-5 {% if forloop.first %}show active{% endif %}" role="tabpanel" >
+    <div class="card box-card">
+      {% for project in domain.projects%}
+      <div class="card-body">
+        <h4 class="card-title font-weight-bold">{{project.title}}</h4>
+        <p class="card-text">{{project.text | markdownify}}</p>
+        <a href="{{project.url}}" class="btn btn-danger float-right">learn more</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<script>
+  var firstSelectedCountries = '{{site.data.domains.first.countries}}'
+</script>
