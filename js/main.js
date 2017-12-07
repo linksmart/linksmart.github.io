@@ -7,7 +7,7 @@ $(function () {
     menu: '#menu',
     slideSelector: 'fp-slide',
     responsiveWidth: 768,
-    // scrollOverflow:true,
+    scrollOverflow: true,
     onLeave: function (index, nextIndex, direction) {
       sectionHandler(nextIndex);
     },
@@ -19,7 +19,7 @@ $(function () {
   $('#world').load('img/world.svg', function (a) {
     $(this).children()[0].setAttribute('viewBox', "0 0 1000 1000");
     selectCountries(firstSelectedCountries);
-  });
+  });  
 });
 
 function sectionHandler(index) {
@@ -31,7 +31,10 @@ function sectionHandler(index) {
     $('.navbar')
       .addClass('highlighted');
   }
-  // console.log(index);
+
+  //only animate once, remove animation classes
+  var toBeRemoved = $('.fp-section.active .reveal');
+  window.setTimeout(function(){toBeRemoved.removeClass('reveal')}, 2000);
 }
 
 function selectCountries(codes) {

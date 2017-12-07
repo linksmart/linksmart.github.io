@@ -1,47 +1,53 @@
-- title: Smart Home
+- title: Smart Building
   icon: smartHome
-  countries: DE,GR,IT
-  projects:
-  - title: Seam4Us Project
-    text: >
-      Adaptive control of lighting, escalators and air flow
-      resulted in a reduction of 5% in energy consumption
-    url: http://seam4us.eu/
-  - title: Another Project
-    text: >
-      **Lorem ipsum** dolor *sit amet*, ~~consectetur~~ adipiscing elit,
-      sed do [eiusmod tempor incididunt](https://en.wikipedia.org/wiki/Lorem_ipsum)
-      ut labore et dolore magna aliqua.
-    url: https://www.google.de/search?q=LinkSmart+eu+Smart+Home
+  countries: BR,IT
+  text: |
+    In several buildings in Turin, LinkSmart® helped to improve energy management 
+    and control in existing (even historical) buildings by introducing IoT sensors 
+    with minimum refurbishment interventions. Energy savings from 27% to 36% have 
+    been achieved in the winter period and from 63% to 74% for cooling energy in 
+    summer period.
+
+    [More about the Seempubs Project](https://ec.europa.eu/digital-single-market/en/news/seempubs-maximum-energy-savings-minimum-intervention-historic-buildings)
+
+    Deep in the rain forest, LinkSmart® was used to implement interactive 
+    energy awareness applications for visitors of Teatro Amazonas in Manaus, Brazil.
+
+    [More about the Impress Project](http://impressproject.eu/news.php)
 
 - title: Industry 4.0
   icon: industry40
-  countries: BR,IE,FR,DE,GR
-  projects:
-  - title: Industry 4.0 Project
-    text: >
-      You can give links or other use other
-      [markdown features](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
-    url: https://www.google.de/search?q=LinkSmart+eu+Industry+4.0
+  countries: IE,GR
+  text: |
+    In factories in Ireland and Greece, LinkSmart® infrastructure is used to digitize 
+    the production processes. In particular, LinkSmart® IoT Agents apply stream mining 
+    to enable predictive maintenance for the production lines.
+    
+    [More about the COMPOSITION Project](http://www.composition-project.eu/)
 
 - title: Smart City
   icon: smartCity
-  countries: IT,ES,TR
-  projects:
-  - title: Smart City Project
-    text: >
-      Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur.
-    url: https://www.google.de/search?q=LinkSmart+eu+Smart+City
+  countries: ES,IT
+  text: |
+    In Turin, a LinkSmart®-enabled IoT infrastructure was deployed to test the future of 
+    waste management. LinkSmart® stream mining and learning services were used to monitor 
+    and predict the fill levels of waste containers in order to optimize the waste management 
+    processes of the city. 
+    
+    [More about the ALMANAC Project](http://www.almanac-project.eu/)
 
 - title: Smart Grid
   icon: smartGrid
-  countries: BR,DE,IT
-  projects:
-  - title: Smart Grid Project
-    text: >
-      Excepteur sint occaecat cupidatat non proident,
-      sunt in culpa qui officia deserunt mollit anim id est laborum.
-    url: https://www.google.de/search?q=LinkSmart+eu+Smart+Grid
+  countries: DK,DE,SI
+  text: |
+    IOn the island of Fur in the north of Denmark, LinkSmart® helped for the first time ever 
+    to measure and balance load in the low-voltage grid and thereby prevent or reduce critical 
+    peak situations. 
+    
+    [More about the GREENCOM Project](http://www.greencom-project.eu/)
 
-
+    Households in Germany and Slovenia are testing LinkSmart® IoT Gateways as part of an 
+    energy monitoring and control system. The pilot project targets end users and future 
+    scenarios of flexible energy generation and consumption. 
+    
+    [More about the Flex4Grid Project](https://www.flex4grid.eu/)

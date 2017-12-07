@@ -34,13 +34,9 @@
     aria-labelledby="nav-{{forloop.index}}-{{ domain.title | slugify }}-tab"
     class="tab-pane fade mb-5 {% if forloop.first %}show active{% endif %}" role="tabpanel" >
     <div class="card box-card">
-      {% for project in domain.projects%}
       <div class="card-body">
-        <h4 class="card-title font-weight-bold">{{project.title}}</h4>
-        <p class="card-text">{{project.text | markdownify}}</p>
-        <a href="{{project.url}}" class="btn btn-danger float-right">learn more</a>
+        {{domain.text | markdownify}}
       </div>
-      {% endfor %}
     </div>
   </div>
   {% endfor %}
