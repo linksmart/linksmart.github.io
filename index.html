@@ -17,8 +17,12 @@
 
 <footer class="footer">
     <div class="footer-content mx-auto">
-      <a class="float-left pl-5" href="https://www.fit.fraunhofer.de/en/imprint.html">Imprint</a>
-      <a class="float-right pr-5" href="#">FAQ</a>
+      <a class="float-left pl-4" href="https://www.fit.fraunhofer.de/en/imprint.html">Imprint</a>
+      <script>
+        var email =  '{{ site.email | split: "" | reverse | join: "" }}';
+        email = email.split('').reverse().join('');
+        document.write('<a class="float-right pr-4" href="mailto:' + email +'">Contact</a>');
+      </script>
     </div>
 </footer>
 
