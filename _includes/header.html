@@ -12,7 +12,7 @@
           {% if forloop.first %}
           <li>
             <a class="navbar-brand" href="#{{id}}">
-              <img src="img/linksmart_logo.svg" height="30" alt="LinkSmart">
+              <img src="/img/logo_monochrom2.svg" height="30" alt="LinkSmart">
             </a>
           </li>
           {% else %}
@@ -20,7 +20,7 @@
             <a class="nav-link" href="#{{id}}">{{tab.title}}</a>
           </li>
           {% endif %}
-          {% if forloop.first == false and forloop.last  == false %}
+          {% if forloop.last  == false %}
             <li class="d-none d-lg-block"><span class="nav-link">|</span></li>
           {% endif %}
 
@@ -29,7 +29,7 @@
         <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
           <li>
             <a class="navbar-brand" href="https://www.fit.fraunhofer.de/en/fb/ucc/ubiquitous.html">
-              <img class="fit" src="img/fit.svg" height="30" alt="LinkSmart">
+              <img class="fit" src="/img/fit.svg" height="30" alt="LinkSmart">
             </a>
           </li>
         </ul>
