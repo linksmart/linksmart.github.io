@@ -64,7 +64,10 @@
     margin-bottom: 20px;
   }
   .header-container {
-    padding-top: 190px;
+    padding-top: 150px;
+    @include media-breakpoint-up(lg) {
+      padding-top: 210px;
+    }
     border-radius: 0;
     background: url(../img/solutions-bg.jpg) no-repeat 50% 0;
     color: #000;
