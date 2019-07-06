@@ -1,6 +1,6 @@
 # linksmart.eu
 
-Source for the LinkSmart website.
+Source for the [LinkSmart website](https://linksmart.eu), built and served by GitHub Pages.
 
 ## Running locally
 
@@ -11,16 +11,16 @@ You need Ruby and gem before starting, then:
 gem install bundler
 
 # clone the project
-git clone https://github.com/aksakalli/jekyll-doc-theme.git
-cd jekyll-doc-theme
+git clone https://github.com/linksmart/linksmart.github.io.git
+cd linksmart.github.io
 
 # run jekyll with dependencies
 bundle exec jekyll serve
 ```
 
-## Docker
+#### Docker
 
-The only docker image generates the site using Jekyll and serves the generated static website with nginx for better performance.
+The docker image generates the site using Jekyll and serves the generated static website with nginx for better performance.
 Building the image:
 
 ```
@@ -49,6 +49,7 @@ You can add new tabs or change the HTML content inside this folder.
 You can add/change links and elements.
 * Jekyll uses the [Liquid templating](https://jekyllrb.com/docs/templates/) language to process templates.
 You can create a new content template to render a data format similar to `_includes/header.html` & `_data/domains.yml`.
+* Github Pages automatically builds and serves the content. The build status is shown in the [commit history](https://github.com/linksmart/linksmart.github.io/commits/master).
 
 ## License
 
