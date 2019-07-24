@@ -5,7 +5,7 @@ description: >
   for device abstraction, data storage, and machine learning.
 
 baseurl: "" # the subpath of your site, e.g. /blog/
-google_analytics: UA-35107405-3
+# google_analytics:
 
 # Build settings
 markdown: kramdown
